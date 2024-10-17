@@ -1,0 +1,165 @@
+:root {
+    --violet: hsl(263, 55%, 52%);
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+    --blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+}
+
+/* CSS Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+input, button, textarea, select {
+    font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+#root, #__next {
+    isolation: isolate;
+}
+/* end of CSS Reset */
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background-color: var(--light-grayish-blue);
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-size: 1.3em;
+    line-height: 1.7;
+}
+
+.testimonials {
+    margin: 3em auto;
+    padding: 1em;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5 auto);
+    gap: 3em;
+    width: 100%;
+}
+
+.card:nth-of-type(1){
+    grid-column: 1;
+}
+
+.card:nth-of-type(4){
+    grid-column: 1;
+    grid-row: 4;
+}
+
+.card:nth-of-type(5){
+    grid-column: 1;
+    grid-row: 5;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: 0.7em;
+    padding: 2em;
+    box-shadow: 0px 50px 100px 0px rgba(61, 72, 89, 0.15);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-block-end: 1em;
+}
+
+.card-header h1 {
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.card-header p {
+    opacity: 50%;
+    font-size: 1.3em;
+}
+
+.profile-img {
+    width: 4em;
+    height: 4em;
+    border-radius: 50%;
+    margin-inline-end: 1em;
+    border: 0.2em solid #996ed9;
+}
+
+.card-lead {
+    font-size: 1.8em;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-block-end: 1em;
+}
+
+.card-quote {
+    font-size: 1.3em;
+    font-weight: 500;
+    opacity: 70%;
+}
+
+.bg-violet {
+    background-color: var(--violet);
+    background-image: url("images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top 0em right 2em;
+    background-size: 9em 10em;
+
+}
+
+.bg-grayish-blue {
+    background-color: var(--dark-grayish-blue);
+}
+
+.bg-blackish-blue {
+    background-color: var(--blackish-blue);
+}
+
+.bg-violet, .bg-grayish-blue, .bg-blackish-blue {
+    color: var(--white);
+}
+
+
+@media screen and (min-width: 768px) {
+    .testimonials {
+        grid-template-columns: repeat(4, 1fr);
+        width: 70%;
+    }
+
+    .card:nth-of-type(1){
+        grid-column: 1/3;
+    }
+
+    .card:nth-of-type(4){
+        grid-column: 2/4;
+        grid-row: 2;
+    }
+
+    .card:nth-of-type(5){
+        grid-column: 4;
+        grid-row: 1/3;
+    }
+}
+
+.attribution { font-size: 1.5em; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
